@@ -1,0 +1,4 @@
+@reference "../../../../index.css";
+
+.root { @apply touch-none; }
+.disabled { @apply touch-auto; }

@@ -1,0 +1,52 @@
+@reference "../../index.css";
+
+.table { @apply w-full border-collapse text-left text-xs; }
+.head { background: #f8faf6; color: #647269; }
+.head th { @apply border-y px-5 py-4 text-[10px] font-semibold; border-color: #eaf0e5; }
+.row { @apply border-b last:border-b-0; border-color: #eef2ea; }
+.row:hover { background: #fcfdfb; }
+.row td, .row th { @apply px-5 py-5 align-middle; }
+.patient { @apply font-normal; min-width: 220px; }
+.patient > span { @apply inline-block align-middle; }
+.patient .avatar { @apply mr-3 inline-grid size-10 shrink-0 place-items-center rounded-full text-xs font-semibold; color: #54714e; background: #eaf0df; }
+.patient strong { @apply block text-[13px] font-semibold; color: #2a4030; }
+.patient > span > span { @apply mt-1.5 block text-[10px]; color: #718074; }
+.contact { color: #647269; }
+.contact > span { @apply flex items-center gap-2 text-[10px] leading-6; overflow-wrap: anywhere; }
+.contact svg { @apply size-3 shrink-0; color: #829181; }
+.active, .archived { @apply inline-flex items-center gap-1 rounded-full px-2 py-1 text-[9px] font-semibold; }
+.active { background: #e9f2df; color: #3d6339; }
+.archived { background: #eef0ed; color: #647269; }
+.active svg, .archived svg { @apply size-3; }
+.visit { @apply whitespace-nowrap text-[10px]; color: #647269; }
+.visit > span:last-child { @apply flex items-center gap-1.5; }
+.visit svg { @apply size-3.5; color: #829181; }
+.action a { @apply inline-flex min-h-10 items-center justify-center gap-1 whitespace-nowrap rounded-lg px-2 text-[10px] font-semibold hover:bg-[#edf4e7]; color: #316342; }
+.action svg { @apply size-3.5; }
+.srOnly { @apply sr-only; }
+.mobileLabel { @apply hidden; }
+
+@media (max-width: 1200px) and (min-width: 1101px) {
+  .row td, .row th, .head th { @apply px-3; }
+  .patient { min-width: 185px; }
+  .patient .avatar { @apply hidden; }
+  .action a { @apply whitespace-normal; }
+}
+@media (max-width: 1100px) {
+  .table, .body { @apply block; }
+  .head { @apply sr-only; }
+  .body { @apply space-y-3; }
+  .row { @apply relative grid grid-cols-[minmax(0,1fr)_auto] overflow-hidden rounded-xl border bg-white p-4; border-color: #e4eadd; }
+  .row td, .row th { @apply p-0; }
+  .patient { @apply col-span-2 mb-4 min-w-0 pr-16; }
+  .patient .avatar { @apply mr-2 size-9; }
+  .patient > span:last-child { max-width: calc(100% - 46px); }
+  .patient strong { @apply text-[13px]; }
+  .contact { @apply col-span-2 mb-4; }
+  .contact > span { @apply text-xs; }
+  .statusCell { @apply absolute top-4 right-3; }
+  .visit { @apply border-t pt-3!; border-color: #edf2e9; }
+  .mobileLabel { @apply mb-1 block text-[9px]; }
+  .action { @apply flex items-end justify-end border-t pt-3!; border-color: #edf2e9; }
+  .action a { @apply min-h-11 px-1; }
+}

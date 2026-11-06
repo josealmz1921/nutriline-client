@@ -1,0 +1,77 @@
+@reference "../../index.css";
+
+.heading > p, .eyebrow { @apply mb-2 text-[9px] font-bold tracking-[0.16em]; color: #64815e; }
+.heading h1 { @apply text-3xl font-bold tracking-tight outline-none; color: #263f2e; }
+.heading > span { @apply mt-3 block text-xs leading-6; color: #65766a; }
+.welcome { @apply relative mt-7 flex items-center justify-between gap-6 overflow-hidden rounded-2xl border px-7 py-8; background: #eaf1e2; border-color: #dce7d3; }
+.welcome > div { @apply relative z-10 min-w-0 max-w-xl; }
+.welcome h2 { @apply text-2xl leading-snug font-semibold tracking-tight; color: #263f2e; }
+.welcome div > p:not(.eyebrow) { @apply mt-3 max-w-md text-xs leading-7; color: #5c735c; }
+.referenceDate { @apply mt-5 flex flex-wrap items-center gap-2 text-[10px] leading-5; color: #60745c; }
+.referenceDate svg { @apply size-3.5 shrink-0; }
+.welcomeArt { @apply grid size-36 shrink-0 place-items-center rounded-full; background: #dce8ce; box-shadow: 0 0 0 20px #e1ebd5, 0 0 0 40px #e5eedb; color: #7a9666; }
+.welcomeArt svg { @apply size-20; stroke-width: 1.2; }
+.demoNote { @apply mt-4 flex items-start gap-2 text-[10px] leading-6; color: #718074; }
+.demoNote svg { @apply mt-1 size-4 shrink-0; }
+.quickActions { @apply mt-7; }
+.quickActions h2, .sectionHeading h2 { @apply text-sm font-semibold; color: #304e39; }
+.quickActions > div { @apply mt-3 grid grid-cols-2 gap-3; }
+.primary, .secondary { @apply flex min-h-12 items-center gap-3 rounded-xl px-5 text-xs font-semibold; }
+.primary { @apply text-white hover:bg-[#254f34]; background: #316342; }
+.secondary { @apply border bg-white hover:bg-[#edf4e7]; border-color: #dfe7d8; color: #526b56; }
+.primary svg, .secondary svg { @apply size-4 shrink-0; }
+.primary svg:last-child, .secondary svg:last-child { @apply ml-auto; }
+.overview { @apply mt-8; }
+.sectionHeading { @apply flex flex-wrap items-center justify-between gap-3; }
+.sectionHeading > span { @apply text-[10px]; color: #718074; }
+.sectionHeading > a { @apply inline-flex min-h-8 items-center gap-1 text-[11px] font-semibold hover:underline; color: #4a7c59; }
+.sectionHeading > a svg { @apply size-3.5; }
+.metrics { @apply mt-4 grid grid-cols-3 gap-4; }
+.content { @apply mt-8 grid items-start gap-6; grid-template-columns: minmax(0, 1fr) 300px; }
+.activity { @apply min-w-0; }
+.activityDescription { @apply mt-2 mb-5 text-[10px] leading-5; color: #718074; }
+.activityList { @apply flex flex-col gap-3; }
+.activityLink { @apply flex items-center gap-3 rounded-2xl border bg-white p-4 hover:bg-[#f8fbf5]; border-color: #e4eadd; }
+.avatar { @apply grid size-11 shrink-0 place-items-center rounded-xl text-xs font-semibold; background: #edf4e7; color: #54714e; }
+.activityText { @apply min-w-0 flex-1; }
+.activityText strong { @apply block text-xs leading-6 font-semibold; color: #304e39; }
+.activityText p { @apply mt-1 text-[11px] leading-5; color: #647269; }
+.activityText > span { @apply mt-2 flex items-center gap-1.5 text-[10px] leading-5; color: #718074; }
+.activityText > span svg { @apply size-3 shrink-0; }
+.recordLabel { @apply inline-flex shrink-0 items-center gap-1 text-[10px] font-semibold; color: #4a7c59; }
+.recordLabel svg { @apply size-3.5; }
+.aside { @apply flex min-w-0 flex-col gap-4; }
+.workflow { @apply rounded-2xl border p-5; background: #edf3e8; border-color: #e0e9d8; }
+.sectionIcon { @apply mb-4 grid size-9 shrink-0 place-items-center rounded-xl bg-white; color: #64815e; }
+.sectionIcon svg { @apply size-5; }
+.workflow h2 { @apply text-base leading-7 font-semibold; color: #304e39; }
+.workflow > p { @apply mt-3 text-[11px] leading-6; color: #687e64; }
+.workflow ol { @apply mt-5 flex flex-col gap-4; }
+.workflow li { @apply flex gap-3; }
+.workflow li > span { @apply grid size-6 shrink-0 place-items-center rounded-full border text-[10px]; border-color: #cbdcc0; color: #4a7c59; }
+.workflow li strong { @apply text-[11px] font-semibold; color: #3f5d3c; }
+.workflow li p { @apply mt-1 text-[10px] leading-5; color: #687e64; }
+.workflow > a { @apply mt-5 inline-flex min-h-10 items-center gap-2 text-[11px] font-semibold hover:underline; color: #4a7c59; }
+.workflow > a svg { @apply size-4; }
+.pending { @apply flex items-start gap-3 rounded-2xl border p-5; border-color: #e4eadd; }
+.pending .sectionIcon { @apply size-8; }
+.pendingBadge { @apply text-[8px] font-bold tracking-widest; color: #718074; }
+.pending h2 { @apply mt-2 text-xs leading-6 font-semibold; color: #526b56; }
+.pending p { @apply mt-2 text-[10px] leading-6; color: #718074; }
+.empty { @apply rounded-xl border bg-white p-6 text-xs; border-color: #e4eadd; color: #718074; }
+@media (max-width: 1200px) {
+  .content { @apply grid-cols-1; }
+  .aside { @apply grid grid-cols-2 items-start; }
+}
+@media (max-width: 700px) {
+  .welcome { @apply px-5 py-6; }
+  .welcomeArt { @apply hidden; }
+  .metrics { @apply grid-cols-1 gap-3; }
+  .aside { @apply grid-cols-1; }
+  .recordLabel { @apply hidden; }
+}
+@media (max-width: 500px) {
+  .heading h1 { @apply text-2xl; }
+  .welcome h2 { @apply text-xl; }
+  .quickActions > div { @apply grid-cols-1; }
+}

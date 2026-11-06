@@ -1,0 +1,33 @@
+@reference "../../index.css";
+
+.intro { @apply flex items-start gap-3 p-6; color: #304e39; }
+.intro > svg { @apply mt-1 size-5 shrink-0; }
+.intro h3, .results h3, .pending h3 { @apply text-sm font-semibold; color: #304e39; }
+.intro p, .pending p { @apply mt-2 text-xs leading-6; color: #647269; }
+.state { @apply mx-6 mb-6 max-w-sm; }
+.section { @apply mx-6 min-w-0 border-0 border-t pt-5 pb-7; border-color: #e4eadd; }
+.section legend { @apply text-sm font-semibold; color: #304e39; }
+.hint { @apply my-3 text-[11px] leading-6; color: #647269; }
+.hint a { @apply underline underline-offset-2; color: #316342; }
+.fields { @apply grid grid-cols-3 gap-4; }
+.field { @apply min-w-0; }
+.label { @apply text-xs font-semibold; color: #344e3c; }
+.input { @apply h-12 w-full min-w-0 rounded-xl border bg-white px-3 text-[13px] outline-none; border-color: #dbe3d9; color: #24372b; }
+.select { @apply grid h-12 w-full grid-cols-[1fr_34px] items-center rounded-xl border bg-white text-xs outline-none; border-color: #dbe3d9; color: #24372b; }
+.input:focus, .select:focus { border-color: #4a7c59; box-shadow: 0 0 0 3px #4a7c5914; }
+.results { @apply border-t p-6; border-color: #e4eadd; }
+.results h3 { @apply flex items-center gap-2; }
+.results h3 svg { @apply size-4; }
+.cards { @apply grid grid-cols-3 gap-3; }
+.extra { @apply mb-6 max-w-sm; }
+.chart { @apply mt-6 rounded-xl border p-4; border-color: #dfe8d9; }
+.chart figcaption { @apply text-xs font-semibold; color: #304e39; }
+.chart svg { @apply mx-auto block w-full max-w-sm; }
+.chart text { @apply text-[11px]; fill: #647269; }
+.chart > p { @apply mt-3 text-xs leading-6; color: #647269; }
+.frame { fill: #f8faf5; stroke: #dfe8d9; }
+.axes { fill: none; stroke: #9bab95; }
+.point { fill: #316342; }
+.pending { @apply m-6 rounded-xl p-4; background: #eef4e7; }
+@media (max-width: 1200px) { .fields { @apply grid-cols-2; } .cards { @apply grid-cols-1; } }
+@media (max-width: 600px) { .fields { @apply grid-cols-1; } .intro, .results { @apply p-4; } .section { @apply mx-4; } .state { @apply mx-4; } .pending { @apply m-4; } }

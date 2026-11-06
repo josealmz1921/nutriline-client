@@ -1,0 +1,45 @@
+import { afterEach, describe, expect, it, vi } from 'vitest'
+import { cleanup, fireEvent, render, screen, within } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import Habits from './Habits'
+import { selectRecallOption as selectOption } from '../DietaryRecall/recallTestHelpers'
+
+afterEach(cleanup)
+describe('Entrevista de hábitos con Informed', () => {
+  it('valida filas, convierte unidades, conserva borrador y excluye ausencia sin perderlo', async () => {
+    const user = userEvent.setup(), complete = vi.fn()
+    render(<Habits weight="70" onComplete={complete} onBack={vi.fn()} onValueChange={vi.fn()} />)
+    await user.click(screen.getByRole('button', { name: 'Continuar' }))
+    expect(complete).not.toHaveBeenCalled()
+    expect(document.activeElement).toBe(screen.getByRole('combobox', { name: 'Disponibilidad de hábitos' }))
+    await selectOption(user, 'Disponibilidad de hábitos', 'Capturar entrevista de hábitos')
+    await selectOption(user, 'Disponibilidad de actividad física', 'Registrar actividades del día')
+    fireEvent.change(screen.getByLabelText('Buscar deporte o actividad · Catálogo de demostración'), { target: { value: 'Yoga Hatha' } })
+    await user.click(screen.getByRole('button', { name: /Yoga Hatha · 2.5 MET/ }))
+    await user.click(screen.getByRole('button', { name: 'Continuar' }))
+    expect(complete).not.toHaveBeenCalled()
+    fireEvent.change(screen.getByLabelText('Duración · Actividad 1'), { target: { value: '0,5' } })
+    await selectOption(user, 'Unidad · Actividad 1', 'Horas')
+    fireEvent.change(screen.getByLabelText('Horas de sueño por día'), { target: { value: '7' } })
+    await user.click(screen.getByRole('button', { name: 'Revisar hábitos' }))
+    const dialog = await screen.findByRole('dialog')
+    expect(dialog.textContent).toContain('91.88')
+    expect(dialog.textContent).toContain('75')
+    expect(dialog.textContent).toContain('Yoga Hatha')
+    await user.click(within(dialog).getByRole('button', { name: 'Volver a hábitos' }))
+    await user.click(screen.getByRole('button', { name: 'Continuar' }))
+    expect(complete).toHaveBeenCalledOnce()
+    await selectOption(user, 'Disponibilidad de hábitos', 'Hábitos no disponibles')
+    await user.click(screen.getByRole('button', { name: 'Continuar' }))
+    expect(complete.mock.calls[1][0].activities).toEqual([])
+    await selectOption(user, 'Disponibilidad de hábitos', 'Capturar entrevista de hábitos')
+    expect((screen.getByLabelText('Duración · Actividad 1') as HTMLInputElement).value).toBe('0,5')
+    await user.click(screen.getByRole('button', { name: 'Quitar actividad 1' }))
+    await user.click(screen.getByRole('button', { name: 'Conservar actividad' }))
+    expect(screen.getByLabelText('Actividad · 1')).toBeTruthy()
+    await user.click(screen.getByRole('button', { name: 'Quitar actividad 1' }))
+    await user.click(screen.getByRole('button', { name: 'Confirmar eliminación de actividad' }))
+    await user.click(screen.getByRole('button', { name: 'Continuar' }))
+    expect(complete).toHaveBeenCalledTimes(2)
+  }, 15000)
+})

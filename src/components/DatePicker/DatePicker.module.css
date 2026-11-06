@@ -1,0 +1,69 @@
+@reference "../../index.css";
+
+.root {
+    @apply grid w-full;
+}
+
+.label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #111827;
+}
+
+.datePickerContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.datePicker {
+    width: 100%;
+    height: 34px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 9999px;
+
+    font-size: 0.875rem;
+    font-weight: 400;
+
+    outline: none;
+    cursor: pointer;
+}
+
+.datePicker::placeholder {
+    color: #000000;
+}
+
+.disabled {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+}
+
+.datePickerWrapper {
+    width: 100%;
+}
+
+.datePickerPopper {
+    z-index: 30;
+}
+
+.datePickerError {
+    font-size: 0.75rem;
+    color: #ef4444;
+}
+
+.icon {
+    position: absolute;
+    z-index: 1;
+    background-color: #ffffff;
+    pointer-events: none;
+
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.invalid { @apply border-red-500; }
+.valid { @apply border-gray-300; }

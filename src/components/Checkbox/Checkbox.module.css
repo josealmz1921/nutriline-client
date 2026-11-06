@@ -1,0 +1,56 @@
+@reference "../../index.css";
+
+.root {
+    @apply relative flex flex-col gap-1;
+}
+
+.label {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.radio {
+    cursor: pointer;
+    position: relative;
+    width: 36px;
+    height: 20px;
+}
+
+.radio::after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border: 1px solid var(--input-color, #d1d5db);
+    border-radius: 20px;
+    transition: background-color 0.2s ease;
+    background: var(--checkbox-inactive, #d1d5db);
+}
+
+.radio::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: inherit;
+    background: white;
+    border: 1px solid var(--input-color, #d1d5db);
+    border-radius: 20px;
+    z-index: 1;
+    transition: transform 0.2s ease;
+}
+
+/* Estado activo usando :has */
+.radio:has(+ .input:checked)::after {
+    background: var(--checkbox-active, #22c55e);
+}
+
+.radio:has(+ .input:checked)::before {
+    transform: translateX(16px);
+}
+
+.input {
+    @apply sr-only;
+}
+
+.root:has(.input:focus-visible) .radio { outline: 2px solid currentColor; outline-offset: 3px; }
+.root:has(.input:disabled) { @apply opacity-50; }

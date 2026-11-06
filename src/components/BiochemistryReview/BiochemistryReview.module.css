@@ -1,0 +1,14 @@
+@reference "../../index.css";
+
+.root { @apply my-5 min-w-0; color: #304e39; }
+.root h3 { @apply text-sm font-semibold; }
+.root > p { @apply my-3 text-[11px] leading-6; color: #647269; }
+.note { @apply rounded-xl p-3; background: #eef4e7; }
+.metadata { @apply my-4 grid grid-cols-2 gap-3; }
+.root dt { @apply text-[10px] leading-5; color: #718074; }
+.root dd { @apply mt-1 text-xs leading-6 whitespace-pre-wrap break-words; }
+.results { @apply flex flex-col gap-3; }
+.result { @apply min-w-0 rounded-xl border p-4; border-color: #e4eadd; }
+.result h4 { @apply text-xs font-semibold; }
+.result dl { @apply mt-3 grid grid-cols-2 gap-3; }
+@media (max-width: 600px) { .metadata, .result dl { @apply grid-cols-1; } }

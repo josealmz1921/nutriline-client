@@ -1,0 +1,18 @@
+@reference "../../index.css";
+
+.container { @apply flex min-h-80 flex-col items-center justify-center gap-3 px-6 py-12 text-center; }
+.icon, .errorIcon { @apply grid size-14 place-items-center rounded-2xl; background: #eaf3e9; color: #4a7c59; }
+.errorIcon { background: #fff0e8; color: #aa5028; }
+.container svg { @apply size-6; }
+.container h2 { @apply text-base font-semibold; color: #304e39; }
+.container p { @apply max-w-sm text-xs leading-6; color: #65766a; }
+.container button { @apply mt-2 min-h-11 rounded-lg border px-4 text-xs font-semibold hover:bg-[#eaf3e9]; border-color: #d9e4d3; color: #316342; }
+.loading { @apply p-6; }
+.loading p { @apply mb-6 flex flex-wrap justify-between gap-2 text-xs; color: #647269; }
+.loading p > span { @apply text-[10px]; }
+.skeleton { @apply my-5 flex items-center gap-4 motion-safe:animate-pulse; }
+.skeleton > span:first-child { @apply size-10 rounded-full; background: #eaf0e4; }
+.skeleton > span:last-child { @apply ml-auto h-6 w-16 rounded-full; background: #edf2e9; }
+.skeleton > div { @apply w-1/2; }
+.skeleton > div > span { @apply mb-2 block h-3 w-2/3 rounded-full; background: #edf2e9; }
+.skeleton > div > span:last-child { @apply w-1/2; }

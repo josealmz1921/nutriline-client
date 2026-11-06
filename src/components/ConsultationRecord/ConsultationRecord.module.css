@@ -1,0 +1,20 @@
+@reference "../../index.css";
+
+.container { @apply mx-auto max-w-3xl; }
+.back { @apply inline-flex min-h-10 items-center gap-2 text-xs font-medium hover:underline; color: #60745c; }
+.back svg { @apply size-4; }
+.heading { @apply mt-5; }
+.heading > p { @apply mb-2 text-[9px] font-bold tracking-widest; color: #64815e; }
+.heading h1 { @apply text-2xl font-bold tracking-tight break-words outline-none; color: #263f2e; }
+.heading > span { @apply mt-3 block text-xs leading-6; color: #65766a; }
+.demoNote { @apply my-5 flex items-start gap-2 text-[11px] leading-6; color: #718074; }
+.demoNote svg { @apply mt-1 size-4 shrink-0; }
+.patient { @apply mb-5 flex flex-wrap items-center justify-between gap-4 rounded-xl border p-4; background: #edf3e8; border-color: #e0e9d8; }
+.patient strong { @apply block text-sm font-semibold; color: #304e39; }
+.patient span { @apply mt-2 block text-[10px]; color: #687e64; }
+.patient a { @apply inline-flex min-h-10 items-center gap-1 text-xs font-semibold hover:underline; color: #4a7c59; }
+.patient a svg { @apply size-4; }
+.archived { @apply mb-5 text-xs leading-6; color: #687e64; }
+.notFound { @apply flex min-h-80 flex-col items-center justify-center gap-5 text-center; }
+.notFound h1 { @apply text-xl font-semibold outline-none; }
+.notFound p { @apply text-sm leading-6; color: #718074; }

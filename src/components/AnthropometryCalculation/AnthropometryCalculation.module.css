@@ -1,0 +1,7 @@
+@reference "../../index.css";
+
+.result { @apply min-w-0 rounded-xl border p-4; border-color: #dfe8d9; background: #f8faf5; }
+.result h4 { @apply text-xs font-semibold; color: #304e39; }
+.result > p:not(.value) { @apply mt-3 text-[11px] leading-6 break-words; color: #647269; }
+.result .value { @apply mt-3 text-lg font-semibold break-words; color: #316342; }
+.formula { @apply border-t pt-2; border-color: #e4eadd; }

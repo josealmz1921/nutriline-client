@@ -1,0 +1,9 @@
+@reference "../../index.css";
+.root { @apply my-5 min-w-0; color: #304e39; }
+.root h3 { @apply text-sm font-semibold; }
+.root p { @apply mt-3 text-[11px] leading-6; color: #647269; }
+.meal { @apply mt-4 rounded-xl border p-4; border-color: #e4eadd; }
+.meal h4 { @apply text-xs font-semibold; }
+.meal h5 { @apply mt-4 text-xs font-medium; }
+.meal li { @apply mt-2 text-xs leading-6 break-words; }
+.meal li span { @apply block text-[9px]; color: #718074; }

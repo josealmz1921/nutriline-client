@@ -1,0 +1,12 @@
+@reference "../../index.css";
+
+.form { @apply min-w-0 rounded-2xl border bg-white; border-color: #e4eadd; }
+.actions { @apply flex flex-wrap items-center justify-between gap-4 rounded-b-2xl border-t p-6; border-color: #e4eadd; background: #fcfdfa; }
+.actions p { @apply max-w-sm text-[11px] leading-6; color: #647269; }
+.primary { @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-5 text-xs font-semibold text-white hover:bg-[#254f34]; background: #316342; }
+.primary svg { @apply size-4; }
+.secondary { @apply min-h-11 rounded-xl border px-4 text-xs font-semibold hover:bg-[#edf4e7]; border-color: #dbe3d9; color: #526b56; }
+.review { @apply px-5 pt-14 pb-6; }
+.review > h2 { @apply text-xl font-semibold; color: #304e39; }
+.review > p { @apply my-3 text-xs leading-6; color: #647269; }
+.review > button { @apply mt-5 w-full; }

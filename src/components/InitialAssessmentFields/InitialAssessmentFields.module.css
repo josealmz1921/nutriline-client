@@ -1,0 +1,45 @@
+@reference "../../index.css";
+
+.section { @apply mx-6 mt-6 min-w-0 border-0 border-t p-0 pt-6 pb-6; border-color: #edf1e9; }
+.section legend { @apply text-sm font-semibold; color: #304e39; }
+.description { @apply mt-2 mb-5 text-[11px] leading-6; color: #718074; }
+.fields { @apply mt-6 grid grid-cols-2 items-start gap-5; }
+.field, .nationality { @apply flex min-w-0 flex-col gap-2; }
+.label { @apply text-xs font-semibold; color: #344e3c; }
+.input, .textarea { @apply w-full min-w-0 rounded-xl border bg-white px-3 text-[13px] outline-none; border-color: #dbe3d9; color: #24372b; }
+.input { @apply h-12; }
+.textarea { @apply min-h-28 resize-y py-3; }
+.select { @apply grid h-12 w-full grid-cols-[1fr_34px] items-center rounded-xl border bg-white text-xs outline-none; border-color: #dbe3d9; color: #24372b; }
+.input:focus, .textarea:focus, .select:focus { border-color: #4a7c59; box-shadow: 0 0 0 3px #4a7c5914; }
+.hint { @apply mt-2 text-[10px] leading-5; color: #718074; }
+.photoRow { @apply flex items-start gap-4; }
+.photoRow > div { @apply min-w-0 flex-1; }
+.photo { @apply grid size-20 shrink-0 place-items-center overflow-hidden rounded-2xl; background: #edf3e8; color: #64815e; }
+.photo > svg { @apply size-9; }
+.photo img { @apply size-full object-cover; }
+.fileRoot { @apply flex min-w-0 flex-col gap-2; }
+.fileLabel { @apply relative inline-flex min-h-11 cursor-pointer items-center self-start rounded-xl border px-4 text-xs font-semibold hover:bg-[#edf4e7]; border-color: #dbe3d9; color: #344e3c; }
+.fileLabel > span { @apply flex items-center gap-2; }
+.fileLabel:focus-within { outline: 2px solid #4a7c59; outline-offset: 3px; }
+.fileLabel svg { @apply size-4; }
+.fileInput { @apply sr-only; }
+.fileData { @apply flex min-w-0 items-center gap-2; }
+.fileName { @apply min-w-0 flex-1 text-xs break-words; color: #526b56; }
+.symptoms { @apply grid grid-cols-3 gap-2; }
+.symptom { @apply flex min-h-11 cursor-pointer items-center gap-2 rounded-lg border px-3 py-2 text-[11px] leading-5; border-color: #e4eadd; color: #526b56; }
+.symptom:has(input:checked) { background: #eef4e7; border-color: #8da77f; }
+.checkbox { @apply size-4 shrink-0 accent-[#316342]; }
+.schedule { @apply mx-6 mb-6 flex items-start gap-3 rounded-xl p-4; background: #f3f6ef; color: #647269; }
+.schedule > svg { @apply mt-1 size-5 shrink-0; }
+.schedule h3 { @apply text-xs font-semibold; }
+.schedule p { @apply mt-2 text-[10px] leading-6; }
+.schedule button { @apply mt-3 min-h-10 cursor-not-allowed rounded-lg border px-3 text-[10px] opacity-65; border-color: #dbe3d9; }
+@media (max-width: 1150px) { .symptoms { @apply grid-cols-2; } }
+@media (max-width: 600px) {
+  .section { @apply mx-4; }
+  .fields { @apply grid-cols-1; }
+  .photoRow { @apply flex-col; }
+  .photoRow > div { @apply w-full; }
+  .symptoms { @apply grid-cols-1; }
+  .schedule { @apply mx-4; }
+}

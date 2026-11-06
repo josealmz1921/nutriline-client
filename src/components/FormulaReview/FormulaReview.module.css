@@ -1,0 +1,12 @@
+@reference "../../index.css";
+.root { @apply my-5 min-w-0; color: #304e39; }
+.root h3 { @apply text-sm font-semibold; }
+.root p { @apply mt-3 text-[11px] leading-6 whitespace-pre-wrap break-words; color: #647269; }
+.root dl { @apply mt-4 grid grid-cols-2 gap-3; }
+.root dl > div { @apply min-w-0 rounded-xl border p-4; border-color: #e4eadd; }
+.root dt { @apply text-xs leading-5 font-semibold; }
+.root dd { @apply mt-2 text-[10px] leading-6; color: #647269; }
+.root strong { @apply text-lg font-semibold; color: #316342; }
+.interpretations { @apply mt-5 rounded-xl p-4; background: #f4f7ef; }
+.interpretations h4 { @apply text-xs font-semibold; }
+@media (max-width: 700px) { .root dl { @apply grid-cols-1; } }

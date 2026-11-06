@@ -1,0 +1,18 @@
+@reference "./index.css";
+
+.counter {
+  @apply mb-6 inline-flex rounded-[5px] border-2 border-transparent px-2.5 py-[5px] text-base;
+  font-family: var(--mono);
+  color: var(--accent);
+  background: var(--accent-bg);
+  transition: border-color 0.3s;
+
+  &:hover {
+    border-color: var(--accent-border);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}

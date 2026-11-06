@@ -1,0 +1,10 @@
+@reference "../../index.css";
+
+.actions { @apply rounded-b-2xl border-t p-5; border-color: #e4eadd; background: #fcfdfa; }
+.actions > p { @apply mb-4 text-[11px] leading-6; color: #647269; }
+.actions > div { @apply flex flex-wrap items-center justify-end gap-3; }
+.primary, .secondary { @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-4 text-xs font-semibold; }
+.primary { @apply text-white hover:bg-[#254f34]; background: #316342; }
+.secondary { @apply border hover:bg-[#edf4e7]; border-color: #dbe3d9; color: #526b56; }
+.primary svg, .secondary svg { @apply size-4; }
+@media (max-width: 600px) { .actions > div { @apply flex-col items-stretch; } }

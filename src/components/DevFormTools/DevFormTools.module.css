@@ -1,0 +1,11 @@
+@reference "../../index.css";
+.root { @apply m-5 min-w-0 rounded-xl border border-dashed p-4; border-color: #b6c7b0; background: #f3f6ed; color: #344e3c; }
+.heading { @apply flex flex-wrap items-center gap-2 text-xs font-semibold; }
+.heading > svg { @apply size-4 shrink-0; }
+.scope { @apply rounded-md bg-white px-2 py-1 text-[10px] font-medium; color: #60715d; }
+.root p { @apply mt-2 text-[11px] leading-6; color: #647269; }
+.root button { @apply mt-3 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border bg-white px-3 py-2 text-xs font-semibold hover:bg-[#e8efdf]; border-color: #c3d1bc; }
+.root button svg { @apply size-4 shrink-0; }
+.root button:focus-visible { outline: 2px solid #316342; outline-offset: 3px; }
+.root .status { @apply font-medium; color: #316342; }
+@media (max-width: 600px) { .root { @apply mx-0 my-4; } .root button { @apply w-full; } }

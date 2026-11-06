@@ -1,0 +1,21 @@
+@reference "../../index.css";
+
+.container { @apply flex h-full min-h-96 flex-col px-5 py-8; }
+.brand { @apply flex w-fit items-center gap-2 text-2xl font-bold tracking-tight; color: #244c32; }
+.brand > span { @apply grid size-9 place-items-center rounded-xl text-white; background: #316342; }
+.brand svg { @apply size-6; }
+.caption { @apply mt-14 mb-4 px-3 text-[10px] font-bold tracking-[0.16em]; color: #6d7e71; }
+.navigation { @apply flex flex-col gap-2; }
+.link, .active { @apply flex min-h-12 items-center gap-3 rounded-xl px-3 text-xs font-medium; }
+.link { color: #65766a; }
+.link:disabled { @apply cursor-not-allowed; }
+.link > span { @apply ml-auto text-[8px]; color: #6d7e71; }
+.active { @apply font-semibold; background: #e5efe1; color: #316342; }
+.navigation svg { @apply size-[18px] shrink-0; }
+.profile { @apply mt-auto border-t pt-6; border-color: #e3eae0; }
+.identity { @apply mt-12 flex items-center gap-3; }
+.avatar { @apply grid size-10 shrink-0 place-items-center rounded-full text-xs font-semibold; background: #e5efe1; color: #316342; }
+.identity strong { @apply block text-xs font-semibold; }
+.identity div > span { @apply mt-1 block text-[10px]; color: #6d7e71; }
+.exit { @apply mt-5 flex min-h-11 items-center gap-2 rounded-lg px-2 text-xs hover:bg-[#eaf3e9]; color: #526558; }
+.exit svg { @apply size-4; }

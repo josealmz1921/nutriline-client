@@ -1,0 +1,7 @@
+@reference "../../index.css";
+.form { @apply min-w-0 rounded-2xl border bg-white; border-color: #e4eadd; }
+.documents { @apply px-6 pb-6; color: #304e39; }
+.documents h3 { @apply text-sm font-semibold; }
+.documents p { @apply my-3 text-[11px] leading-6; color: #647269; }
+.documents > div { @apply flex flex-wrap gap-3; }
+.documents button { @apply min-h-11 rounded-xl border px-4 py-2 text-xs font-semibold; border-color: #dbe3d9; color: #526b56; }

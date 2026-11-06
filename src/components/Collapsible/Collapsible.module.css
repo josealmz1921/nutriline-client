@@ -1,0 +1,55 @@
+@reference "../../index.css";
+
+.container {
+    @apply overflow-hidden rounded-xl;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.1s ease;
+}
+
+.buttonCollapse {
+    composes: button;
+    border-radius: 1rem;
+}
+
+.icon {
+    font-size: 0.875rem;
+}
+
+.panel {
+    padding: 1rem;
+    background: white;
+    overflow: hidden;
+    transition:
+        max-height 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.panelHidden {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.comments {
+}
+
+/* Variantes */
+.comments .button,
+.comments .panel {
+    background: var(--comments-block-color);
+}
+.icon svg { @apply size-4; }

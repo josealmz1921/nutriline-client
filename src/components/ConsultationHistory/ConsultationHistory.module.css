@@ -1,0 +1,30 @@
+@reference "../../index.css";
+
+.history { @apply min-w-0; }
+.heading { @apply flex flex-wrap items-center justify-between gap-3; }
+.heading h2 { @apply flex items-center gap-2 text-base font-semibold; color: #304e39; }
+.heading h2 > span { @apply rounded-full px-2 py-0.5 text-[10px] font-medium; background: #e8eedf; color: #60745c; }
+.heading > span { @apply flex items-center gap-1 text-[10px]; color: #718074; }
+.heading svg { @apply size-3.5; }
+.timezone { @apply mt-2 mb-5 text-[10px] leading-5; color: #718074; }
+.list { @apply flex flex-col gap-3; }
+.list button { @apply flex w-full min-w-0 items-center gap-3 rounded-xl border bg-white p-4 text-left transition-colors hover:bg-[#f8fbf5]; border-color: #e4eadd; }
+.list button[aria-pressed="true"] { border-color: #7f9c75; box-shadow: 0 0 0 1px #7f9c75; }
+.calendar { @apply grid size-10 shrink-0 place-items-center rounded-xl; background: #edf4e7; color: #64815e; }
+.calendar svg { @apply size-5; }
+.summary { @apply flex min-w-0 flex-1 flex-col gap-1; }
+.summary time { @apply text-[10px] leading-5; color: #647269; }
+.summary strong { @apply text-xs leading-6 font-semibold; color: #304e39; }
+.summary > span { @apply text-[9px]; color: #718074; }
+.arrow { @apply size-4 shrink-0; color: #64815e; }
+.pagination { @apply my-4 flex flex-wrap items-center justify-between gap-3; }
+.pagination > p, .pagination nav > span { @apply text-[10px]; color: #718074; }
+.pagination nav { @apply flex items-center gap-3; }
+.pagination button { @apply grid size-10 place-items-center rounded-lg border bg-white enabled:hover:bg-[#edf4e7]; border-color: #e4eadd; color: #526b56; }
+.pagination button:disabled { @apply cursor-not-allowed opacity-35; }
+.pagination svg { @apply size-4; }
+.empty { @apply flex min-h-72 flex-col items-center justify-center gap-3 rounded-2xl border bg-white p-6 text-center; border-color: #e4eadd; }
+.empty > span { @apply grid size-12 place-items-center rounded-xl; background: #edf4e7; color: #64815e; }
+.empty svg { @apply size-6; }
+.empty h3 { @apply text-sm font-semibold; color: #304e39; }
+.empty p { @apply max-w-xs text-xs leading-6; color: #718074; }

@@ -1,0 +1,28 @@
+@reference "../../index.css";
+
+.detail { @apply rounded-2xl border bg-white p-6; border-color: #e4eadd; }
+.header { @apply border-b pb-5; border-color: #edf1e9; }
+.header > span { @apply flex items-center gap-2 text-[9px] font-semibold tracking-wider; color: #64815e; }
+.header svg { @apply size-3.5; }
+.header h3 { @apply mt-3 mb-2 text-lg font-semibold; color: #304e39; }
+.header time { @apply text-xs; color: #647269; }
+.header p { @apply mt-2 text-[9px]; color: #718074; }
+.reason { @apply my-5; }
+.reason h4, .measurementTitle, .notes h4 { @apply text-xs font-semibold; color: #526b56; }
+.reason p { @apply mt-2 text-sm leading-6; color: #304e39; }
+.measurementTitle { @apply mb-3 flex items-center gap-2; }
+.measurementTitle svg { @apply size-4; }
+.measurements { @apply grid grid-cols-3 gap-3; }
+.measurements > div { @apply min-w-0 rounded-xl p-3; background: #f0f5eb; }
+.measurements dt { @apply text-[10px]; color: #647269; }
+.measurements dd { @apply mt-2 text-lg font-semibold; color: #304e39; }
+.measurements dd span { @apply text-[10px] font-normal; color: #647269; }
+.measurements .bmi { background: #e8f0df; }
+.bmiNote { @apply mt-3 text-[10px] leading-5; color: #718074; }
+.notes { @apply mt-5 rounded-xl border p-4; border-color: #e4eadd; }
+.notes p { @apply mt-2 text-xs leading-7 whitespace-pre-wrap; color: #647269; }
+@media (max-width: 600px) {
+  .detail { @apply p-4; }
+  .measurements { @apply grid-cols-2; }
+  .measurements .bmi { @apply col-span-2; }
+}

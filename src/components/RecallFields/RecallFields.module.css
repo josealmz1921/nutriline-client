@@ -1,0 +1,13 @@
+@reference "../../index.css";
+.root { @apply min-w-0 p-6; }
+.header { @apply mb-5 flex items-start gap-3; }
+.header > svg { @apply mt-1 size-5 shrink-0; color: #316342; }
+.header h2 { @apply text-sm font-semibold; color: #304e39; }
+.header p { @apply mt-2 text-[11px] leading-6; color: #647269; }
+.availability { @apply max-w-md; }
+.label { @apply text-xs font-semibold; color: #344e3c; }
+.select { @apply grid min-h-12 w-full grid-cols-[1fr_34px] items-center rounded-xl border bg-white text-xs outline-none; border-color: #dbe3d9; color: #24372b; }
+.notice { @apply my-5 rounded-xl p-4 text-[11px] leading-6; background: #eef4e7; color: #526b56; }
+.mealLinks { @apply flex flex-wrap gap-2; }
+.mealLinks a { @apply inline-flex min-h-11 items-center rounded-lg border px-3 text-[11px] hover:bg-[#eef4e7]; color: #526b56; border-color: #dbe3d9; }
+@media (max-width: 600px) { .root { @apply p-4; } }

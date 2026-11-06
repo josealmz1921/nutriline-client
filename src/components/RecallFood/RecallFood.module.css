@@ -1,0 +1,22 @@
+@reference "../../index.css";
+.food { @apply my-4 min-w-0 rounded-xl border bg-white p-4; border-color: #e1e8dc; }
+.food legend { @apply max-w-full px-1 text-xs font-semibold; color: #304e39; }
+.fields { @apply mt-4 grid grid-cols-[2fr_1fr_1fr] gap-3; }
+.field { @apply min-w-0; }
+.label { @apply text-[11px] leading-5 font-semibold; color: #344e3c; }
+.input, .select { @apply min-h-11 w-full min-w-0 rounded-xl border bg-white text-xs outline-none; border-color: #dbe3d9; color: #24372b; }
+.input { @apply px-3; }
+.select { @apply grid grid-cols-[1fr_34px] items-center; }
+.input:focus, .select:focus { outline: 2px solid #4a7c59; outline-offset: 2px; }
+.input[aria-invalid="true"] { border-color: #dc2626; }
+.hint, .reference p, .confirm p { @apply mt-3 text-[10px] leading-6; color: #647269; }
+.reference { @apply mt-3; }
+.reference summary { @apply cursor-pointer text-[10px] leading-6; color: #526b56; }
+.reference dl { @apply mt-3 grid grid-cols-2 gap-3; }
+.reference dt { @apply text-[10px] leading-5; color: #647269; }
+.reference dd { @apply text-xs font-semibold; color: #304e39; }
+.remove, .confirm button { @apply mt-3 inline-flex min-h-11 items-center gap-2 rounded-lg border px-3 text-[10px]; border-color: #dbe3d9; color: #526b56; }
+.remove svg { @apply size-3.5; }
+.confirm { @apply flex flex-wrap items-center gap-2; }
+.confirm p { @apply w-full; }
+@media (max-width: 700px) { .fields, .reference dl { @apply grid-cols-1; } }

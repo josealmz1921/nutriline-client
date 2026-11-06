@@ -1,0 +1,9 @@
+@reference "../../index.css";
+
+.root { @apply fixed inset-0 z-[100] flex items-center justify-center p-4; background: #1c2a2266; backdrop-filter: blur(3px); }
+.content { background: #fafbf8; width: min(100%, 540px); max-height: calc(100dvh - 2rem); border-radius: 1rem; position: relative; overflow-y: auto; box-shadow: 0 24px 64px #17271c33; }
+.closeButton { position: absolute; right: 1rem; top: 1rem; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: #eaf0e6; cursor: pointer; }
+.closeButton:focus-visible { outline: 2px solid #7b8d85; outline-offset: 3px; }
+.icon { width: 20px; height: 20px; color: #445247; }
+.content { @apply outline-none; }
+.wide { width: min(100%, 1100px); }

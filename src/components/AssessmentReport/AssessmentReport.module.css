@@ -1,0 +1,10 @@
+@reference "../../index.css";
+.root { @apply min-w-0; color: #304e39; }
+.root h2 { @apply text-lg leading-8 font-semibold; }
+.root h3 { @apply mt-6 text-sm font-semibold; }
+.root p { @apply my-3 text-[11px] leading-6 break-words; color: #647269; }
+.root .warning { @apply rounded-lg p-3 font-semibold; background: #eef4e7; color: #526b56; }
+.root dl { @apply mt-4 grid grid-cols-2 gap-3; }
+.root dt { @apply text-[11px] font-semibold; }
+.root dd { @apply mt-1 text-xs leading-6; }
+@media (max-width: 650px) { .root dl { @apply grid-cols-1; } }

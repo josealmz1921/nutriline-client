@@ -1,0 +1,22 @@
+@reference "../../index.css";
+.root { @apply min-w-0 px-6 pt-14 pb-6; }
+.root header > p { @apply mb-2 text-[10px] font-bold tracking-widest; color: #64815e; }
+.root h2 { @apply text-xl font-semibold; color: #304e39; }
+.root header > span { @apply mt-2 block text-xs leading-6; color: #647269; }
+.actions { @apply my-5 flex flex-wrap gap-3; }
+.actions a, .actions button, .back, .error button { @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border px-4 py-2 text-xs font-semibold; border-color: #cbd8c3; color: #316342; background: #f1f6ec; }
+.actions svg { @apply size-4 shrink-0; }
+.actions :disabled { @apply cursor-wait opacity-50; }
+.actions a:hover, .actions button:enabled:hover { background: #e3eddc; }
+.actions a:focus-visible, .root button:focus-visible, .textVersion summary:focus-visible { outline: 2px solid #316342; outline-offset: 3px; }
+.notice, .mobileNotice { @apply my-4 text-xs leading-6; color: #647269; }
+.viewer { @apply w-full rounded-xl border bg-white; height: 65dvh; min-height: 400px; border-color: #dbe5d7; }
+.textVersion { @apply my-5 rounded-xl border p-4; border-color: #dbe5d7; }
+.textVersion summary { @apply cursor-pointer text-xs font-semibold leading-6; color: #316342; }
+.textVersion h3 { @apply mt-6 mb-3 text-sm font-semibold; color: #304e39; }
+.textVersion p, .textVersion dt { @apply my-2 text-xs leading-6; color: #647269; }
+.textVersion dd { @apply mb-3 text-xs leading-6 whitespace-pre-wrap break-words; color: #304e39; }
+.back { @apply w-full; }
+.error { @apply my-5 rounded-xl border p-4 text-sm leading-6; color: #9b2929; border-color: #e7b7b7; }
+.error button { @apply mt-3; }
+@media (max-width: 767px) { .root { @apply px-4; } .viewer { @apply hidden; } .actions { @apply flex-col; } }

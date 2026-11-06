@@ -1,0 +1,28 @@
+@reference "../../index.css";
+
+.table { @apply w-full table-fixed text-left; }
+.table th { @apply px-4 py-4 text-[10px] font-semibold; background: #f7f9f3; color: #718074; }
+.table th:first-child { width: 29%; }
+.table th:nth-child(2) { width: 26%; }
+.table th:last-child { width: 16%; }
+.table td { @apply border-t px-4 py-5 align-top text-[11px] leading-6 break-words; border-color: #edf1e9; color: #526b56; }
+.patient { @apply block text-xs font-semibold hover:underline; color: #304e39; }
+.active, .archived { @apply mt-2 inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[9px] leading-5; }
+.active { background: #e9f2df; color: #3d6339; }
+.archived { background: #eef0ed; color: #647269; }
+.active svg, .archived svg { @apply size-3; }
+.identifier { @apply mt-1 block text-[9px]; color: #718074; }
+.action a { @apply inline-flex min-h-10 items-center justify-center gap-1 rounded-lg px-1 text-[10px] font-semibold hover:bg-[#edf4e7]; color: #316342; }
+.action svg { @apply size-3.5 shrink-0; }
+.srOnly { @apply sr-only; }
+@media (max-width: 1000px) {
+  .table, .body { @apply block; }
+  .table thead { @apply sr-only; }
+  .body { @apply grid grid-cols-2 gap-4 bg-[#f5f8f0] p-4; }
+  .body tr { @apply flex min-w-0 flex-col rounded-xl border bg-white p-4; border-color: #e4eadd; }
+  .table td { @apply block border-0 p-0 pb-3; }
+  .table td::before { @apply mb-1 block text-[9px]; content: attr(data-label); color: #718074; }
+  .table .action { @apply mt-auto border-t pt-3 pb-0; border-color: #edf1e9; }
+  .action a { @apply w-full justify-between; }
+}
+@media (max-width: 650px) { .body { @apply grid-cols-1; } }

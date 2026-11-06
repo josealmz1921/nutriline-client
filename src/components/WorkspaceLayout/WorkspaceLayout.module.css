@@ -1,0 +1,31 @@
+@reference "../../index.css";
+
+.layout { @apply min-h-svh; background: #f5f8f2; }
+.sidebar { @apply fixed inset-y-0 left-0 z-20 w-64 border-r; background: #fcfdfa; border-color: #e4eadd; }
+.workspace { @apply ml-64 flex min-h-svh min-w-0 flex-col; }
+.header { @apply flex min-h-20 items-center justify-between gap-4 border-b px-10; background: #fcfdfa; border-color: #e4eadd; }
+.breadcrumb { @apply flex items-center gap-3 text-xs; color: #6a796d; }
+.breadcrumb svg { @apply size-4; }
+.breadcrumb strong { @apply font-semibold; color: #304e39; }
+.demoBadge { @apply rounded-full border px-3 py-1.5 text-[10px] font-medium; color: #526b56; border-color: #dce7d6; background: #f2f7ee; }
+.main { @apply mx-auto w-full max-w-[1400px] flex-1 px-10 py-10 outline-none; }
+.footer { @apply px-6 py-6 text-center text-[10px]; color: #718074; }
+.menuButton { @apply hidden size-11 items-center justify-center rounded-lg; color: #316342; }
+.menuButton svg { @apply size-6; }
+.skipLink { @apply fixed -top-20 left-4 z-[200] rounded-lg bg-white p-3 text-sm focus:top-4; color: #316342; }
+@media (max-width: 1000px) {
+  .sidebar { @apply w-56; }
+  .workspace { @apply ml-56; }
+  .main { @apply px-6; }
+  .header { @apply px-6; }
+}
+@media (max-width: 760px) {
+  .sidebar { @apply hidden; }
+  .workspace { @apply ml-0; }
+  .menuButton { @apply flex shrink-0; }
+  .header { @apply min-h-16 gap-2 px-4; }
+  .breadcrumb { @apply mr-auto gap-1.5; }
+  .breadcrumb > span, .breadcrumb > svg, .breadcrumb > a { @apply hidden; }
+  .main { @apply px-4 py-7; }
+  .demoBadge { @apply px-2 text-[9px]; }
+}

@@ -1,0 +1,8 @@
+@reference "../../index.css";
+.meal { @apply mt-5 min-w-0 rounded-xl border p-5; border-color: #e4eadd; scroll-margin-top: 1rem; }
+.meal h3 { @apply mb-4 text-sm font-semibold; color: #304e39; }
+.label { @apply text-xs font-semibold; color: #344e3c; }
+.select { @apply grid min-h-12 w-full grid-cols-[1fr_34px] items-center rounded-xl border bg-white text-xs outline-none; border-color: #dbe3d9; color: #24372b; }
+.add { @apply mt-4 inline-flex min-h-11 items-center gap-2 rounded-lg border px-3 text-xs font-semibold; border-color: #dbe3d9; color: #526b56; }
+.add svg { @apply size-4; }
+@media (max-width: 600px) { .meal { @apply p-3; } }

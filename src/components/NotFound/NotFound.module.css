@@ -1,0 +1,11 @@
+@reference "../../index.css";
+
+.page { @apply flex min-h-svh flex-col items-center justify-center gap-4 px-6 py-12 text-center; background: #f7faf6; }
+.icon { @apply grid size-16 place-items-center rounded-2xl; background: #eaf3e9; color: #316342; }
+.icon svg { @apply size-8; }
+.code { @apply mt-4 text-xs font-semibold tracking-widest; color: #64815e; }
+.page h1 { @apply text-2xl font-bold tracking-tight; color: #263f2e; }
+.page > p:last-of-type { @apply max-w-sm text-sm leading-7; color: #65766a; }
+.primary { @apply mt-4 inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-5 text-sm font-semibold text-white hover:bg-[#254f34]; background: #316342; }
+.primary svg { @apply size-4; }
+.secondary { @apply inline-flex min-h-11 items-center text-xs font-semibold underline-offset-4 hover:underline; color: #316342; }

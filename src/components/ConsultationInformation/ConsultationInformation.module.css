@@ -1,0 +1,18 @@
+@reference "../../index.css";
+.form { @apply min-w-0 rounded-2xl border bg-white; border-color: #e4eadd; }
+.section { @apply mx-6 mt-6 min-w-0 border-0 p-0 pb-7; }
+.section legend { @apply text-sm font-semibold; color: #304e39; }
+.section p { @apply my-4 text-xs leading-6; color: #718074; }
+.fields { @apply grid grid-cols-2 gap-5; }
+.fullWidth { @apply col-span-2; }
+.field { @apply flex min-w-0 flex-col gap-2; }
+.label { @apply text-xs font-semibold; color: #344e3c; }
+.input { @apply w-full min-w-0 rounded-xl border bg-white px-3 py-3 text-sm outline-none; border-color: #dbe3d9; color: #24372b; }
+textarea.input { @apply min-h-28 resize-y; }
+.input:focus { border-color: #4a7c59; box-shadow: 0 0 0 3px #4a7c5914; }
+.input[aria-invalid="true"] { border-color: #dc2626; }
+.symptoms { @apply grid grid-cols-2 gap-3; }
+.symptoms label { @apply flex min-h-10 items-center gap-3 text-xs; color: #344e3c; }
+.symptoms input { @apply size-4 shrink-0 accent-[#316342]; }
+.cancel { @apply inline-flex min-h-11 items-center justify-center rounded-lg px-4 text-xs font-semibold hover:bg-[#edf4e7]; color: #60745c; }
+@media (max-width: 600px) { .section { @apply mx-4; } .fields, .symptoms { @apply grid-cols-1; } .fullWidth { @apply col-span-1; } }

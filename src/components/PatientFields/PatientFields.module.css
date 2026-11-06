@@ -1,0 +1,21 @@
+@reference "../../index.css";
+
+.section { @apply mx-6 mt-6 min-w-0 border-0 p-0 pb-7; }
+.section + .section { @apply border-t pt-6; border-color: #edf1e9; }
+.section legend { @apply flex items-center gap-2.5 text-sm font-semibold; color: #304e39; }
+.section legend > span { @apply grid size-8 place-items-center rounded-lg; background: #edf4e7; color: #4a7c59; }
+.section legend svg { @apply size-4; }
+.description { @apply mt-3 mb-6 text-[11px] leading-6; color: #718074; }
+.fields { @apply grid grid-cols-2 gap-x-5 gap-y-6; }
+.fullWidth { @apply col-span-2; }
+.field { @apply flex min-w-0 flex-col gap-2; }
+.label { @apply text-xs font-semibold; color: #344e3c; }
+.input { @apply h-12 w-full min-w-0 rounded-xl border bg-white px-3 text-[13px] outline-none transition-colors; border-color: #dbe3d9; color: #24372b; }
+.input::placeholder { color: #879188; }
+.input:focus { border-color: #4a7c59; box-shadow: 0 0 0 3px #4a7c5914; }
+.input[aria-invalid="true"] { border-color: #dc2626; }
+@media (max-width: 600px) {
+  .section { @apply mx-4; }
+  .fields { @apply grid-cols-1; }
+  .fullWidth { @apply col-span-1; }
+}

@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import "@fontsource/plus-jakarta-sans/400.css";
+@import "@fontsource/plus-jakarta-sans/500.css";
+@import "@fontsource/plus-jakarta-sans/600.css";
+@import "@fontsource/plus-jakarta-sans/700.css";
+
+:root {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  color: #131e17;
+  background: #f7faf6;
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body { margin: 0; min-width: 320px; }
+#root { min-height: 100svh; }
+button, input { font: inherit; }
+button:enabled { cursor: pointer; }
+button:focus-visible, a:focus-visible {
+  outline: 2px solid #316342;
+  outline-offset: 4px;
+}

@@ -1,0 +1,23 @@
+@reference "../../index.css";
+.root { @apply min-w-0 p-6; }
+.header { @apply mb-5 flex items-start gap-3; }
+.header svg { @apply mt-1 size-5 shrink-0; color: #316342; }
+.header h2, .root h3 { @apply text-sm font-semibold; color: #304e39; }
+.root h3 { @apply my-5; }
+.header p, .catalog p { @apply mt-2 text-[11px] leading-6; color: #647269; }
+.fields { @apply my-5 grid grid-cols-2 gap-4; }
+.field { @apply min-w-0; }
+.label, .catalog label { @apply text-xs leading-5 font-semibold; color: #344e3c; }
+.input, .textarea, .select { @apply min-h-12 w-full min-w-0 rounded-xl border bg-white text-xs outline-none; border-color: #dbe3d9; color: #24372b; }
+.input, .textarea { @apply px-3; }
+.textarea { @apply min-h-28 py-3; }
+.select { @apply grid grid-cols-[1fr_34px] items-center; }
+.input:focus, .textarea:focus, .select:focus { outline: 2px solid #4a7c59; outline-offset: 2px; }
+.notice { @apply my-5 rounded-xl p-4 text-[11px] leading-6; background: #eef4e7; color: #526b56; }
+.catalog { @apply my-5 rounded-xl p-4; background: #f4f7ef; }
+.catalog input { @apply mt-2; }
+.catalog ul { @apply mt-3 grid gap-2; }
+.catalog li button { @apply flex min-h-11 w-full items-center justify-between gap-3 rounded-lg border bg-white px-3 py-2 text-left text-[11px] leading-5; border-color: #dbe3d9; color: #344e3c; }
+.catalog button svg { @apply size-4 shrink-0; }
+.add { @apply my-4 inline-flex min-h-11 items-center gap-2 rounded-lg border px-3 text-xs font-semibold; border-color: #dbe3d9; color: #526b56; }
+@media (max-width: 650px) { .root { @apply p-4; } .fields { @apply grid-cols-1; } }

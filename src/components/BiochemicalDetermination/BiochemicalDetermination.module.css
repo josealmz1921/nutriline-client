@@ -1,0 +1,15 @@
+@reference "../../index.css";
+
+.card { @apply min-w-0 rounded-xl border p-4; border-color: #e4eadd; background: #fcfdfa; }
+.card legend { @apply max-w-full px-1 text-sm leading-6 font-semibold; color: #304e39; }
+.fields { @apply grid grid-cols-2 gap-4; }
+.fullWidth { @apply col-span-2 min-w-0; }
+.field { @apply min-w-0; }
+.label { @apply text-[11px] leading-5 font-semibold; color: #344e3c; }
+.input, .textarea { @apply w-full min-w-0 rounded-xl border bg-white px-3 text-[13px] outline-none; border-color: #dbe3d9; color: #24372b; }
+.input { @apply h-12; }
+.textarea { @apply min-h-20 resize-y py-3; }
+.input:focus, .textarea:focus { border-color: #4a7c59; box-shadow: 0 0 0 3px #4a7c5914; }
+.input[aria-invalid="true"], .textarea[aria-invalid="true"] { border-color: #dc2626; }
+.hint { @apply mt-3 text-[10px] leading-5; color: #718074; }
+@media (max-width: 600px) { .fields { @apply grid-cols-1; } .fullWidth { @apply col-span-1; } }

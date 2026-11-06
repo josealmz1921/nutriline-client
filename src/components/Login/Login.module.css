@@ -1,0 +1,82 @@
+@reference "../../index.css";
+
+.page { @apply grid min-h-svh; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+/* Una capa de pintura estable evita trazos SVG incompletos al repintar el formulario. */
+.page svg { transform: translateZ(0); }
+.story { @apply relative flex flex-col overflow-hidden px-12 py-10; background: #eaf3e9; }
+.brand { @apply flex w-fit items-center text-3xl font-bold tracking-tight no-underline; color: #244c32; }
+.brandIcon { @apply mr-2 grid size-10 place-items-center rounded-xl; background: #316342; color: white; }
+.brandIcon svg { @apply size-7; }
+.brandDot { color: #739875; }
+.storyContent { @apply mx-auto flex w-full max-w-lg flex-1 flex-col justify-center py-14; }
+.eyebrow { @apply mb-6 flex items-center gap-2 text-[10px] font-bold tracking-[0.18em]; color: #41684b; }
+.eyebrow > span { @apply size-1.5 rounded-full; background: #4a7c59; }
+.story h1 { @apply text-[clamp(2rem,3.1vw,3.25rem)] leading-[1.22] font-semibold tracking-[-0.05em]; color: #23452e; }
+.story h1 > span { color: #64866a; }
+.storyDescription { @apply mt-6 max-w-sm text-sm leading-7; color: #506655; }
+.illustration { @apply relative mx-auto mt-12 flex h-60 w-full max-w-sm items-center justify-center; }
+.orbit { @apply absolute size-64 rounded-full border; border-color: #cfdfcc; box-shadow: 0 0 0 25px #e3eee180, 0 0 0 50px #e3eee140; }
+.previewCard { @apply relative w-full rounded-2xl border bg-white/90 p-6; border-color: #fff; transform: rotate(-4deg); box-shadow: 0 20px 50px -20px #41684b40; }
+.previewHeader { @apply flex items-center gap-3; }
+.previewHeader strong { @apply block text-xs font-semibold; }
+.previewHeader div > span { @apply mt-1 block text-[10px]; color: #6c7a6d; }
+.previewIcon { @apply grid size-11 shrink-0 place-items-center rounded-xl; background: #eaf3e9; color: #4a7c59; }
+.previewIcon svg { @apply size-6; }
+.check { @apply ml-auto size-4; color: #4a7c59; }
+.previewLine { @apply mt-6 h-2 w-4/5 rounded-full; background: #eaf0e9; }
+.previewLineShort { @apply mt-2 h-2 w-3/5 rounded-full; background: #f0f4ee; }
+.previewFooter { @apply mt-6 flex gap-5 border-t pt-4 text-[10px]; border-color: #eef2ec; color: #5d7361; }
+.previewFooter > span { @apply flex items-center gap-1.5; }
+.leafBadge { @apply absolute -top-2 right-2 z-10 grid size-14 rotate-12 place-items-center rounded-2xl; background: #d6e6c8; color: #41684b; }
+.leafBadge svg { @apply size-7; }
+.floatingNote { @apply absolute -bottom-1 -right-3 flex items-center gap-2 rounded-xl bg-white px-4 py-3 text-[10px] font-medium shadow-sm; color: #41684b; }
+.floatingNote > span { @apply grid size-5 place-items-center rounded-full; background: #eaf3e9; }
+.storyFooter { @apply text-xs; color: #5d7361; }
+.access { @apply relative flex flex-col items-center justify-center px-8 py-12; background: #fcfdfa; }
+.formContainer { @apply w-full max-w-[390px] py-12; }
+.welcomeIcon { @apply mb-7 grid size-12 place-items-center rounded-2xl; background: #eaf3e9; color: #316342; }
+.welcomeIcon svg { @apply size-6; }
+.kicker { @apply mb-3 text-[10px] font-bold tracking-[0.16em]; color: #64866a; }
+.formContainer h2 { @apply text-[28px] leading-tight font-bold tracking-[-0.04em]; }
+.subtitle { @apply mt-3 text-[13px] leading-6; color: #69756c; }
+.form { @apply mt-9 flex flex-col gap-6; }
+.fieldRoot { @apply flex flex-col gap-2; }
+.label { @apply text-xs font-semibold; color: #34483a; }
+.field { @apply h-[52px] w-full rounded-xl border bg-white pr-12 pl-10 text-sm outline-none transition-colors; border-color: #dbe3d9; color: #24372b; }
+.field::placeholder { color: #879188; }
+.field:focus { border-color: #4a7c59; box-shadow: 0 0 0 3px #4a7c5914; }
+.passwordGroup { @apply flex flex-col items-stretch gap-3; }
+.passwordToggle { @apply grid size-9 shrink-0 place-items-center rounded-lg; color: #738076; }
+.passwordToggle:hover { background: #eaf3e9; }
+.passwordToggle svg { @apply col-start-1 row-start-1 size-5 shrink-0; transform: translateZ(0); }
+.visibleIcon { visibility: visible; }
+.hiddenIcon { visibility: hidden; }
+.demoLink { @apply mx-auto mt-4 flex w-fit items-center gap-2 text-xs font-semibold underline-offset-4 hover:underline; color: #316342; }
+.recovery { @apply self-end text-xs font-semibold underline-offset-4 hover:underline; color: #316342; }
+.submit { @apply flex min-h-[52px] items-center justify-center gap-3 rounded-xl px-5 text-sm font-semibold text-white transition-colors; background: #316342; box-shadow: 0 4px 10px #31634215; }
+.submit:hover { background: #254f34; }
+.submit svg { @apply size-[18px]; }
+.notice { @apply rounded-xl border p-3 text-xs leading-6; background: #eaf3e9; border-color: #d7e4d4; color: #31513a; }
+.emptyNotice { @apply hidden; }
+.previewNotice { @apply mt-7 text-center text-[10px] leading-5; color: #69756c; }
+.footer { @apply absolute right-6 bottom-6 left-6 flex flex-wrap items-center justify-center gap-2 text-center text-[10px]; color: #6c7a6d; }
+.mobileBrand { @apply hidden; }
+
+@media (min-width: 1440px) {
+  .story { @apply px-16; }
+}
+@media (max-width: 900px) {
+  .story { @apply px-8; }
+  .illustration { @apply max-w-64; }
+  .floatingNote { @apply -right-1; }
+  .previewHeader { @apply gap-2; }
+}
+@media (max-width: 700px) {
+  .page { @apply grid-cols-1; }
+  .story { @apply hidden; }
+  .access { @apply min-h-svh justify-start px-6 pt-8 pb-20; }
+  .mobileBrand { @apply mb-5 flex w-full max-w-[390px] items-center gap-2 text-2xl font-bold tracking-tight; color: #316342; }
+  .mobileBrand svg { @apply size-7; }
+  .formContainer { @apply my-auto py-10; }
+  .formContainer h2 { @apply text-[26px]; }
+}

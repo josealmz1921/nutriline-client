@@ -1,0 +1,28 @@
+// Orden exacto de span1–span24 en NuevoPaciente.php y consutas.js.
+export const recallNutrients = [
+  { id: 'energiaKcal', label: 'Energía', unit: 'kcal', additive: true },
+  { id: 'energiaKJ', label: 'Energía', unit: 'kJ', additive: true },
+  { id: 'proteinag', label: 'Proteína', unit: 'g', additive: true },
+  { id: 'lipidosg', label: 'Lípidos', unit: 'g', additive: true },
+  { id: 'HidratCarbg', label: 'Hidratos de carbono', unit: 'g', additive: true },
+  { id: 'fibrag', label: 'Fibra', unit: 'g', additive: true },
+  { id: 'vitaminAbugRE', label: 'Vitamina A', unit: '', additive: false },
+  { id: 'AcidoAscorbicomg', label: 'Ácido ascórbico', unit: 'mg', additive: true },
+  { id: 'AcidoFolicomg', label: 'Ácido fólico', unit: '', additive: false },
+  { id: 'hierroNOEMmg', label: 'Hierro no HEM', unit: 'mg', additive: true },
+  { id: 'calciomg', label: 'Calcio', unit: 'mg', additive: true },
+  { id: 'hierromg', label: 'Hierro', unit: 'mg', additive: true },
+  { id: 'sodiomg', label: 'Sodio', unit: 'mg', additive: true },
+  { id: 'potasiomg', label: 'Potasio', unit: 'mg', additive: true },
+  { id: 'azucarg', label: 'Azúcar', unit: 'g', additive: true },
+  { id: 'azucar', label: 'Azúcar · Segunda columna original', unit: '', additive: false },
+  { id: 'indiceglicemico', label: 'Índice glicémico', unit: '', additive: false },
+  { id: 'cargaglicemica', label: 'Carga glicémica', unit: '', additive: false },
+  { id: 'colesterol', label: 'Colesterol', unit: 'mg', additive: true },
+  { id: 'selenio', label: 'Selenio', unit: '', additive: false },
+  { id: 'AGSaturadosg', label: 'Ácidos grasos saturados', unit: 'g', additive: true },
+  { id: 'AGMonog', label: 'Ácidos grasos monoinsaturados', unit: 'g', additive: true },
+  { id: 'AGPolig', label: 'Ácidos grasos poliinsaturados', unit: 'g', additive: true },
+  { id: 'Eanol', label: 'Etanol', unit: '', additive: false },
+] as const
+export type RecallNutrientId = typeof recallNutrients[number]['id']
